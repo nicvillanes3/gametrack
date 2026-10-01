@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Track</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<header>
+
+    <div id="titulogame">
+        <h1>Game Track</h1>
+    </div>
+
+    <h2>Minha biblioteca</h2>
+    <p>Organize seus jogos e acompanhe seu progresso.</p>
+
+</header>
+
+<main>
+
+    <section class="dashboard">
+
+        <div class="info">
+            <div>
+                <p>Jogos cadastrados</p>
+                <h2 id="totalJogos">0</h2>
+            </div>
+        </div>
+
+        <div class="info">
+            <div>
+                <p>Jogando</p>
+                <h2 id="totalJogando">0</h2>
+            </div>
+        </div>
+
+        <div class="info">
+            <div>
+                <p>Finalizados</p>
+                <h2 id="totalFinalizados">0</h2>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="jogos">
+
+        <div class="titulo-secao">
+            <h2>Meus jogos</h2>
+            <p>Veja e organize sua biblioteca.</p>
+        </div>
+
+        <div class="filtros">
+
+            <input
+                type="text"
+                id="pesquisa"
+                placeholder="Pesquisar jogo..."
+            >
+
+            <select id="filtroStatus">
+                <option value="Todos">Todos os status</option>
+                <option value="Quero jogar">Quero jogar</option>
+                <option value="Jogando">Jogando</option>
+                <option value="Finalizado">Finalizado</option>
+                <option value="Abandonado">Abandonado</option>
+            </select>
+
+        </div>
+
+        <div id="listaJogos" class="lista-jogos"></div>
+
+    </section>
+
+    <section class="formulario" id="cadastro">
+
+        <div class="titulo-formulario">
+            <h2>Adicionar jogo</h2>
+            <p>Cadastre um novo jogo na sua biblioteca.</p>
+        </div>
+
+        <form id="formJogo">
+
+            <div class="campo">
+                <label for="titulo">Título</label>
+                <input type="text" id="titulo" placeholder="Ex: Minecraft" required>
+            </div>
+
+            <div class="campo">
+                <label for="genero">Gênero</label>
+                <input type="text" id="genero" placeholder="Ex: Sandbox" required>
+            </div>
+
+            <div class="campo">
+                <label for="plataforma">Plataforma</label>
+                <input type="text" id="plataforma" placeholder="Ex: PC" required>
+            </div>
+
+            <div class="campo">
+                <label for="nota">Nota</label>
+                <input type="number" id="nota" placeholder="0 a 10" min="0" max="10" step="0.1" required>
+            </div>
+
+            <div class="campo">
+                <label for="status">Status</label>
+
+                <select id="status" required>
+                    <option value="">Selecione</option>
+                    <option value="Quero jogar">Quero jogar</option>
+                    <option value="Jogando">Jogando</option>
+                    <option value="Finalizado">Finalizado</option>
+                    <option value="Abandonado">Abandonado</option>
+                </select>
+            </div>
+
+            <div class="botoes-form">
+
+                <button type="submit" id="botaoSalvar">
+                    Cadastrar jogo
+                </button>
+
+                <button
+                    type="button"
+                    id="botaoCancelar"
+                    class="cancelar"
+                    style="display: none;"
+                >
+                    Cancelar
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+</main>
+
+<div id="modalEditar" class="modal">
+
+    <div class="modal-conteudo">
+
+        <div class="topo-modal">
+
+            <div>
+                <h2>Editar jogo</h2>
+                <p>Altere as informações do jogo.</p>
+            </div>
+
+            <button type="button" id="fecharModal" class="fechar">
+                ×
+            </button>
+
+        </div>
+
+        <form id="formEditar">
+
+            <div class="campo">
+                <label for="editarTitulo">Título</label>
+                <input type="text" id="editarTitulo" required>
+            </div>
+
+            <div class="campo">
+                <label for="editarGenero">Gênero</label>
+                <input type="text" id="editarGenero" required>
+            </div>
+
+            <div class="campo">
+                <label for="editarPlataforma">Plataforma</label>
+                <input type="text" id="editarPlataforma" required>
+            </div>
+
+            <div class="campo">
+                <label for="editarNota">Nota</label>
+                <input type="number" id="editarNota" min="0" max="10" step="0.1" required>
+            </div>
+
+            <div class="campo">
+                <label for="editarStatus">Status</label>
+
+                <select id="editarStatus" required>
+                    <option value="Quero jogar">Quero jogar</option>
+                    <option value="Jogando">Jogando</option>
+                    <option value="Finalizado">Finalizado</option>
+                    <option value="Abandonado">Abandonado</option>
+                </select>
+
+            </div>
+
+            <div class="botoes-modal">
+
+                <button type="submit" class="salvar-edicao">
+                    Salvar alterações
+                </button>
+
+                <button type="button" id="cancelarEdicao" class="cancelar">
+                    Cancelar
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="script.js"></script>
+
+
+</body>
+</html>

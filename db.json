@@ -1,0 +1,61 @@
+{
+  "jogos": [
+    {
+      "titulo": "Minecraft",
+      "genero": "Sandbox",
+      "plataforma": "PC",
+      "nota": 9.5,
+      "status": "Jogando",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "titulo": "GTA V",
+      "genero": "Ação",
+      "plataforma": "PlayStation",
+      "nota": 9,
+      "status": "Finalizado"
+    },
+    {
+      "id": "3",
+      "titulo": "Fortnite",
+      "genero": "Battle Royale",
+      "plataforma": "PC",
+      "nota": 8.5,
+      "status": "Jogando"
+    },
+    {
+      "id": "4",
+      "titulo": "Roblox",
+      "genero": "Aventura",
+      "plataforma": "PC",
+      "nota": 8,
+      "status": "Quero jogar"
+    },
+    {
+      "id": "5",
+      "titulo": "FIFA 25",
+      "genero": "Esporte",
+      "plataforma": "PlayStation",
+      "nota": 8.5,
+      "status": "Jogando"
+    },
+    {
+      "id": "6",
+      "titulo": "The Sims 4",
+      "genero": "Simulação",
+      "plataforma": "PC",
+      "nota": 9,
+      "status": "Finalizado"
+    },
+    {
+      "titulo": "Hollow Knight",
+      "genero": "Metroidvania",
+      "plataforma": "PC",
+      "nota": 8,
+      "status": "Finalizado",
+      "id": "LD3cbulVqqM"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
